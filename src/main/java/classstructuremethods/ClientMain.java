@@ -9,6 +9,6 @@ public class ClientMain {
         System.out.println(client.getName() + "\n" + client.getYear() + "\n" + client.getAdress());
 
         client.migrate("6000 Kecskemét Új u. 111");
-        System.out.println("Az új címe: " + client.getAdress());
+        System.out.println("Az új cím: " + client.getAdress());
     }
 }
