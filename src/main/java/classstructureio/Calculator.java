@@ -10,6 +10,6 @@ public class Calculator {
         System.out.println("A második egész szám: ");
         int szam2 = konzol.nextInt();
         System.out.println(szam1 + " + " + szam2 + "=");
-        System.out.println(szam1+szam2);
+        System.out.println(szam1 + szam2);
     }
 }
