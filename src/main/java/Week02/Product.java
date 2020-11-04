@@ -18,12 +18,15 @@ public class Product {
     }
 
     public boolean areTheyEqual(Product p){
-       return this.name.equals(p.name);
+       boolean n = name.equals(p.name);
+       boolean codeDiff = Math.abs(code.length()-p.code.length()) <= 1;
+       return n && codeDiff;
     }
+
 
     public static void main(String[] args) {
         Product product1 =new Product("Kenyér","111");
-        Product product2 =new Product("Kenyér","112");
+        Product product2 =new Product("Kenyér","121");
         Product product3 =new Product("Pogácsa","333");
 
         System.out.println(product1.areTheyEqual(product2));
