@@ -1,5 +1,6 @@
 package Week02;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class InputNames {
@@ -11,8 +12,7 @@ public class InputNames {
 
             System.out.println("Adja meg az " + (i + 1) + ". nevet: ");
             name[i] = scanner.nextLine();
-            System.out.println(name[i] + ", ");
         }
-
+        System.out.println(Arrays.toString(name));
     }
 }
