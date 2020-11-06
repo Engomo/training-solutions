@@ -36,5 +36,7 @@ public class Books {
 
         List<String> titlesStartWhitJava = books.findAllByPrefix("Java");
         System.out.println(titlesStartWhitJava);
+
+        System.out.println(books.getTitles().get(1));
     }
 }
