@@ -39,43 +39,45 @@ public class Controller {
     public void runMenu() {
         int selector = 1;
 
-       do { System.out.println("Válassz egy menüpontot: ");
-           selector = Integer.parseInt(scanner.nextLine());}
-           while (selector > 0 && selector < 8); {
-           }
-
-            switch (selector) {
-                case 1:
-                    office.printNames();
-                    break;
-                case 2:
-                    office.printNamesReverse();
-                    break;
-                case 3:
-                    office.printEventNames();
-                    break;
-                case 4:
-                    office.printAreas();
-                    break;
-                case 5:
-                    System.out.println("Adja meg a tárgyaló nevét: ");
-                    office.printMeetingRoomsWithName(scanner.nextLine());
-                    break;
-                case 6:
-                    System.out.println("Adja meg a keresendő kifejezést: ");
-                    office.printMeetingRoomsContains(scanner.nextLine());
-                    break;
-                case 7:
-                    System.out.println("Adja meg a tárgyaló minimum területét: ");
-                    office.printAreasLargerThan(Integer.parseInt(scanner.nextLine()));
-                    break;
-                default:
-
-                    break;
-            }
-
+        do {
+            System.out.println("Válassz egy menüpontot: ");
+            selector = Integer.parseInt(scanner.nextLine());
+        }
+        while (selector > 0 && selector < 8);
+        {
         }
 
+        switch (selector) {
+            case 1:
+                office.printNames();
+                break;
+            case 2:
+                office.printNamesReverse();
+                break;
+            case 3:
+                office.printEventNames();
+                break;
+            case 4:
+                office.printAreas();
+                break;
+            case 5:
+                System.out.println("Adja meg a tárgyaló nevét: ");
+                office.printMeetingRoomsWithName(scanner.nextLine());
+                break;
+            case 6:
+                System.out.println("Adja meg a keresendő kifejezést: ");
+                office.printMeetingRoomsContains(scanner.nextLine());
+                break;
+            case 7:
+                System.out.println("Adja meg a tárgyaló minimum területét: ");
+                office.printAreasLargerThan(Integer.parseInt(scanner.nextLine()));
+                break;
+            default:
+
+                break;
+        }
+
+    }
 
 
     public static void main(String[] args) {

@@ -2,9 +2,9 @@ package Week02;
 
 
 public class MeetingRoom {
-private String name;
-private int lenght;
-private int width;
+    private String name;
+    private int lenght;
+    private int width;
 
     public MeetingRoom(String name, int lenght, int width) {
         this.name = name;
@@ -36,7 +36,7 @@ private int width;
         this.width = width;
     }
 
-    public int getArea(){
+    public int getArea() {
         return getWidth() * getLenght();
     }
 }
