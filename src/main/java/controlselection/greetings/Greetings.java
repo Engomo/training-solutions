@@ -1,11 +1,6 @@
 package controlselection.greetings;
 
-import org.w3c.dom.ls.LSOutput;
-import statements.Time;
-
-import java.time.Clock;
 import java.time.LocalTime;
-import java.util.Scanner;
 
 public class Greetings {
 
