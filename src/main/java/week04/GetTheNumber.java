@@ -9,22 +9,25 @@ public class GetTheNumber {
 
     Scanner scanner = new Scanner(System.in);
 
-    public void getTheNumber(){
-        int randomNumber = rnd.nextInt(101);
-        int myNumber;
-        for (int i = 0; i <= 6; i++) {
+    public void getTheNumber() {
+        int randomNumber = rnd.nextInt(100) + 1;
+        int myNumber = 0;
+
+        for (int i = 0; i < 6 || myNumber != randomNumber; i++) {
             System.out.println("Adja meg a számot amire gondol: ");
             myNumber = Integer.parseInt(scanner.nextLine());
-            if(myNumber < randomNumber){
+            if (myNumber < randomNumber) {
                 System.out.println("Nagyobb");
             }
-            if(myNumber > randomNumber){
+            if (myNumber > randomNumber) {
                 System.out.println("Kisebb");
             }
-            if(myNumber == randomNumber){
+            if (myNumber == randomNumber) {
                 System.out.println("kitaláltad!");
             }
+
         }
+
     }
 
     public static void main(String[] args) {
