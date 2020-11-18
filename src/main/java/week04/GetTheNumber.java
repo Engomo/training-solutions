@@ -13,7 +13,7 @@ public class GetTheNumber {
         int randomNumber = rnd.nextInt(100) + 1;
         int myNumber = 0;
 
-        for (int i = 0; i < 6 || myNumber != randomNumber; i++) {
+        for (int i = 0; i < 6 && myNumber != randomNumber; i++) {
             System.out.println("Adja meg a számot amire gondol: ");
             myNumber = Integer.parseInt(scanner.nextLine());
             if (myNumber < randomNumber) {
@@ -25,7 +25,12 @@ public class GetTheNumber {
             if (myNumber == randomNumber) {
                 System.out.println("kitaláltad!");
             }
-
+        }
+        if (myNumber == randomNumber){
+            System.out.println("Ügyes vagy!");
+        }
+        else{
+            System.out.println("Nem Sikerült!");
         }
 
     }
