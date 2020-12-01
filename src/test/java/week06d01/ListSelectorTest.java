@@ -21,8 +21,14 @@ public class ListSelectorTest {
 
     }
 
-//    @Test
-//    void listNullTest() {
-//        assertThrows("list should be not null!", ls.listSelector(Arrays.asList()));
-//    }
+    @Test
+    void listNullTest() {
+        assertThrows(IllegalArgumentException.class,()-> ls.listSelector(null));
+    }
+
+    @Test
+    void listSelectorEmptyTest() {
+        assertEquals("", ls.listSelector(Arrays.asList()));
+
+    }
 }
