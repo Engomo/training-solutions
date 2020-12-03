@@ -1,4 +1,4 @@
-package week05d07;
+package week05d02;
 
 public class ChangeLetter {
     public String changeVowels(String str) {
