@@ -14,7 +14,7 @@ public class Budget {
     public List<Item> getItemsByMonth(int month) {
         List<Item> result = new ArrayList<>();
         for (Item i : items) {
-            if (i.getDate().getMonth().equals(getItemsByMonth(month))) {
+            if (i.getDate().getMonthValue() == month) {
                 result.add(i);
             }
         }
