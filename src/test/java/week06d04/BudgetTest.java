@@ -15,6 +15,7 @@ public class BudgetTest {
            new Item(300, LocalDate.of(2020,12,15),"kenyér"),
            new Item(30, LocalDate.of(2020,11,15),"kifli"),
            new Item(40, LocalDate.of(2020,8,15),"zsömle"),
+           new Item(40, LocalDate.of(2020,9,15),"zsömle"),
            new Item(200, LocalDate.of(2020,12,15),"kakaós csiga")));
 
     @Test
