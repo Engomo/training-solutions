@@ -1,4 +1,4 @@
-package immutable.satellite;
+package immutable;
 
 import org.junit.jupiter.api.Test;
 
