@@ -13,13 +13,13 @@ public class NumberListTest {
 
     @Test
     public void numberListTest() {
-        assertTrue(new NumberList().isIncreasing(Arrays.asList(1, 2, 3, 3, 3, 5)));
+        assertTrue(new NumberList().isIncreasing(List.of(1, 2, 3, 3, 3, 5)));
 
     }
 
     @Test
     public void numberListTest2() {
 
-        assertFalse(new NumberList().isIncreasing(Arrays.asList(7, 1, 2, 3, 3, 3, 5)));
+        assertFalse(new NumberList().isIncreasing(List.of(7, 1, 2, 3, 3, 3, 5)));
     }
 }
