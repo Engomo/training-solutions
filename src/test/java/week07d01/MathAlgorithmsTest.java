@@ -16,6 +16,7 @@ public class MathAlgorithmsTest {
         assertTrue(new MathAlgorithms().isPrime(47));
         assertTrue(new MathAlgorithms().isPrime(23));
         assertTrue(new MathAlgorithms().isPrime(83));
+        assertTrue(new MathAlgorithms().isPrime(2));
     }
 
     @Test
@@ -24,5 +25,6 @@ public class MathAlgorithmsTest {
         assertFalse(new MathAlgorithms().isPrime(16));
         assertFalse(new MathAlgorithms().isPrime(27));
         assertFalse(new MathAlgorithms().isPrime(33));
+        assertFalse(MathAlgorithms.isPrime(22));
     }
 }
