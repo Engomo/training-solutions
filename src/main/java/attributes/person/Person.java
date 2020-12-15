@@ -1,7 +1,5 @@
 package attributes.person;
 
-import Week02.Phone;
-
 public class Person {
     private String name;
     private String identificationCard;
