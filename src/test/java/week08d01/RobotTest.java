@@ -11,8 +11,8 @@ public class RobotTest {
     public void moveTest(){
 
         Robot robot = new Robot(0,0);
-        assertEquals("2,-2", robot.move("JJLL").toString());
-        assertEquals("2,-2", robot.move("BBFFJLJL").toString());
+        assertEquals("2,-2", robot.move("FLBJJJLL").toString());
+
 
     }
 
