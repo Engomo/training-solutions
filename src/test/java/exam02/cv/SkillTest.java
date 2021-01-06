@@ -12,4 +12,6 @@ public class SkillTest {
         assertEquals("programming", skill.getName());
         assertEquals(3, skill.getLevel());
     }
+
+
 }
