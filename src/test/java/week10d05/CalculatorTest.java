@@ -12,4 +12,10 @@ class CalculatorTest {
         assertEquals(16, new Calculator().findMindSum(new int[]{1, 3, 9, 7, 5}));
         assertEquals(7, new Calculator().findMindSum(new int[]{1, 3, 5, 7, 9, -2}));
     }
+
+    @Test
+    void smallArray() {
+        assertThrows(IllegalArgumentException.class, ()-> new Calculator().findMindSum(new int[]{1, 2}));
+        assertThrows(IllegalArgumentException.class, ()-> new Calculator().findMindSum(new int[]{}));
+    }
 }
