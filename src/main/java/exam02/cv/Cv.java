@@ -18,9 +18,9 @@ private List<Skill> skills = new ArrayList<>();
         return name;
     }
 
-public void addSkills(String... skill) {
-        skills.addAll(Arrays.asList(skill));
-}
+//public void addSkills(String... skill) {
+//        skills.addAll(Arrays.asList(skill));
+//}
 
 
 
