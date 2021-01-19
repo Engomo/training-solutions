@@ -20,9 +20,6 @@ public class FenceTypes {
 
     @Override
     public String toString() {
-        return "FenceTypes{" +
-                "num=" + num +
-                ", fence=" + fence +
-                '}';
+        return fence + ": " + num;
     }
 }
