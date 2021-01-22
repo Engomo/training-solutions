@@ -1,4 +1,4 @@
-package contorladvanced.duplicates;
+package controladvanced.duplicates;
 
 import java.util.ArrayList;
 import java.util.List;

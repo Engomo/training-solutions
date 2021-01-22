@@ -1,4 +1,4 @@
-package lacalvariables;
+package localvariables;
 
 public class DistanceMain {
     public static void main(String[] args) {

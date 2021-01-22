@@ -1,4 +1,4 @@
-package introcontstructors;
+package introconstructors;
 
 public class RestaurantMain {
     public static void main(String[] args) {
