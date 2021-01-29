@@ -12,9 +12,9 @@ public class DataEditing {
         Set<Character> characters = new HashSet<>();
         String lowerCaseStr = str.toLowerCase();
 
-        for (int i = 0; i < str.length(); i++) {
-            if (isEnglishLowerCaseChar(lowerCaseStr.charAt(i))) {
-                characters.add(lowerCaseStr.charAt(i));
+        for (Character c : lowerCaseStr.toCharArray()) {
+            if (isEnglishLowerCaseChar(c)) {
+                characters.add(c);
             }
         }
         return characters.size();
@@ -23,6 +23,7 @@ public class DataEditing {
     private boolean isEnglishLowerCaseChar(char c) {
         if (c >= 'a' && c <= 'z') {
             return true;
-        }return false;
+        }
+        return false;
     }
 }
