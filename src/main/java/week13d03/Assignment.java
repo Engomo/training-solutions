@@ -13,22 +13,22 @@ public class Assignment {
 
     public void readFromFile(String fileName) {
         try (BufferedReader br = Files.newBufferedReader(Path.of(fileName))) {
-            String line;
+            String[] block = new String[4];
 
-            while ((line = br.readLine()) != null) {
-                separateClasses(br);
+            while ((block[0] = br.readLine()) != null) {
+                teacherList.add(separateClasses(br, block));
             }
         } catch (IOException e) {
             throw new IllegalStateException("Cannot read file.", e);
         }
     }
 
-    private void separateClasses(BufferedReader br) throws IOException {
-        String name = br.readLine();
-        String subject = br.readLine();
-        String division = br.readLine();
-        int hours = Integer.parseInt(br.readLine());
-        teacherList.add(new Teacher(name, subject, division, hours));
+    private Teacher separateClasses(BufferedReader br, String[] block) throws IOException {
+
+        for (int i = 1; i < 4; i++) {
+            block[i] = br.readLine();
+        }
+        return new Teacher(block[0], block[1], block[2], Integer.parseInt(block[3]));
     }
 
     public int calculateTeacherHours(String name) {
