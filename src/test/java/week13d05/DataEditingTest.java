@@ -8,6 +8,6 @@ class DataEditingTest {
 
     @Test
     void sumOfLetters() {
-        assertEquals(4, new DataEditing().sumOfLetters("ABCabc  ,.-12/%áőüöíóúűi=+"));
+        assertEquals(4, new DataEditing().sumOfLetters("ABCaaabbccbc  ,.-12/%áőüöíóúűi=+"));
     }
 }
