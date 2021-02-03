@@ -66,7 +66,7 @@ public class Orders {
         System.out.println(orders.searchOrderById("C123")); //1
         System.out.println(orders.sumOfOrderById("C123")); //3
         System.out.println(orders.sumOfProducts()); //4
-        System.out.println(orders.sumOfProductsByName("beer"));
+        System.out.println(orders.sumOfProductsByName("beer")); //2
 
     }
 }
