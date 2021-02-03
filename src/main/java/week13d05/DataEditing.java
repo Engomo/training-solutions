@@ -12,7 +12,7 @@ public class DataEditing {
         Set<Character> characters = new HashSet<>();
         String lowerCaseStr = str.toLowerCase();
 
-        for (Character c : lowerCaseStr.toCharArray()) {
+        for (char c : lowerCaseStr.toCharArray()) {
             if (isEnglishLowerCaseChar(c)) {
                 characters.add(c);
             }
