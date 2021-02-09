@@ -40,7 +40,7 @@ public class Quiz {
 
     public Question getRandomQuestion() {
         Random random = new Random();
-        return questions.get(random.nextInt(questions.size() + 1));
+        return questions.get(random.nextInt(questions.size()));
     }
 
     public Map<String, List<Question>> getAllQuestionByTheme() {
@@ -78,10 +78,10 @@ public class Quiz {
     public static void main(String[] args) {
         Quiz quiz = new Quiz();
         quiz.readFile(Path.of("kerdesek.txt"));
-//        System.out.println(quiz.getQuestions().size());
-//        System.out.println(quiz.getQuestionsByTheme("matematika"));
-//        System.out.println(quiz.getRandomQuestion());
-//        System.out.println(quiz.getAllQuestionByTheme());
+        System.out.println(quiz.getQuestions().size());
+        System.out.println(quiz.getQuestionsByTheme("matematika"));
+        System.out.println(quiz.getRandomQuestion());
+        System.out.println(quiz.getAllQuestionByTheme());
         System.out.println(quiz.getMaxPointsByTheme());
     }
 }
