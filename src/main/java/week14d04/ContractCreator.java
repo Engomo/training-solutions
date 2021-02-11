@@ -8,7 +8,7 @@ public class ContractCreator {
     private Contract contract;
 
     public ContractCreator(String client, List<Integer> monthlyPrices) {
-        this.contract = new Contract(client, monthlyPrices);
+        this.contract = new Contract(client, new ArrayList<>(monthlyPrices));
     }
 
     public Contract create(String name) {
