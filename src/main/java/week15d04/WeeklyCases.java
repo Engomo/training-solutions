@@ -5,17 +5,18 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class WeeklyCases {
 
     private List<Data> dataList = new ArrayList<>();
 
-    public void readFromFile(Path path) {
+    public void readFromFileByCountry(Path path, String country) {
         try (BufferedReader br = Files.newBufferedReader(path)) {
             String line;
             while ((line = br.readLine()) != null) {
-            dataListByCountry(createData(line), "Hungary");
+                dataListByCountry(createData(line), country);
             }
         } catch (IOException ioe) {
             throw new IllegalStateException("Cannot read file", ioe);
@@ -24,29 +25,31 @@ public class WeeklyCases {
 
     private Data createData(String line) {
         String[] splittedLine = line.split(",");
-        return new Data(splittedLine[0], splittedLine[1], splittedLine[2], splittedLine[3],splittedLine[4]);
+        return new Data(splittedLine[0], splittedLine[1], splittedLine[2], splittedLine[3], splittedLine[4]);
     }
 
     private void dataListByCountry(Data data, String country) {
-        if(data.getCountriesAndTerritories().equals(country)) {
+        if (data.getCountriesAndTerritories().equals(country)) {
             dataList.add(data);
+            Collections.reverse(dataList);
         }
     }
 
     public String selectMostWeeklyCases() {
-        Data result = dataList.get(0);
-        for (Data d : dataList) {
-            if (Integer.parseInt(d.getCases_weekly()) > Integer.parseInt(result.getCases_weekly())) {
-                result = d;
-            }
-        }
-        return result.getYear_week();
+        List<Data> resultList = new ArrayList<>();
+        Collections.sort(dataList);
+        Collections.reverse(dataList);
+        resultList.add(dataList.get(0));
+        resultList.add(dataList.get(1));
+        resultList.add(dataList.get(2));
+        return resultList.toString();
     }
 
-    public static void main(String[] args) {
-        WeeklyCases weeklyCases = new WeeklyCases();
-        weeklyCases.readFromFile(Path.of("data.csv"));
-        System.out.println(weeklyCases.selectMostWeeklyCases());
 
+    public static void main(String[] args) {
+
+        WeeklyCases weeklyCases = new WeeklyCases();
+        weeklyCases.readFromFileByCountry(Path.of("data.csv"), "Hungary");
+        System.out.println(weeklyCases.selectMostWeeklyCases());
     }
 }

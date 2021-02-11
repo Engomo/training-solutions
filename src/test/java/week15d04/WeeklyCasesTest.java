@@ -13,7 +13,7 @@ class WeeklyCasesTest {
 
     @Test
     void selectMostWeeklyCases() {
-        weeklyCases.readFromFile(Path.of("data.csv"));
+        weeklyCases.readFromFileByCountry(Path.of("data.csv"), "Hungary");
         assertEquals("2020-48", weeklyCases.selectMostWeeklyCases());
     }
 }
