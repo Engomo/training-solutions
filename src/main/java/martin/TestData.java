@@ -1,5 +1,7 @@
 package martin;
 
+import java.util.List;
+
 public interface TestData {
     public static final String[][] MATRIX = new String[][] {
             { "12.6", "14.2", "15.1", "19"  , "9.2" },
@@ -8,4 +10,6 @@ public interface TestData {
             { "12.6", "22.1", "15.1", "13.1", "7.3" },
             { "13.6", "4.22", "15.1", "15.8", "1.1" }
     };
+
+    Double matrixMaxAverageByRow(String[][] matrix);
 }

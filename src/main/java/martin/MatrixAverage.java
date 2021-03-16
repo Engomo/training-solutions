@@ -4,15 +4,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MatrixAverage implements  TestData{
 
+public class MatrixAverage implements TestData {
+
+    @Override
     public Double matrixMaxAverageByRow(String[][] matrix) {
         List<Double> row = new ArrayList<>();
         List<Double> averageList = new ArrayList<>();
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                row.add(Double.parseDouble(matrix[i][j]));
+
+        for (String[] strings : matrix) {
+
+            for (String string : strings) {
+                row.add(Double.parseDouble(string));
             }
+
             averageList.add(rowAverage(row));
             row.clear();
         }
@@ -27,6 +32,7 @@ public class MatrixAverage implements  TestData{
         }
         return sum / row.size();
     }
+
 
     public static void main(String[] args) {
         MatrixAverage matrixAverage = new MatrixAverage();
